@@ -6,9 +6,7 @@
   <title>PLOP-JON | Portable Toilets You Can Count On</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth; 
-    }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       padding: 0;
@@ -23,12 +21,10 @@
       text-align: center;
       position: relative;
     }
-    header img.logo {
+    header .logo {
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 60px;
-      height: auto;
     }
     header h1 {
       font-size: 2.4em;
@@ -36,43 +32,25 @@
       font-weight: 600;
       font-family: 'Playfair Display', serif;
     }
-    header p {
-      margin-top: 0.6em;
-      font-size: 1.15em;
-    }
-    .cta {
-      font-size: 1.2em;
-      background: #FFA500;
-      padding: 0.6em 1.2em;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 1em;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    .cta:hover {
-      background: #ff9800;
-    }
-    .sticky-cta {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+    .cta, .sticky-cta {
       background-color: #FFA500;
       color: #333;
       padding: 0.7em 1.4em;
       border-radius: 50px;
       font-weight: 600;
-      font-size: 1em;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       text-decoration: none;
-      z-index: 1000;
+      font-size: 1em;
       transition: background 0.3s ease;
     }
-    .sticky-cta:hover {
-      background-color: #ff9800;
+    .cta:hover, .sticky-cta:hover { background: #ff9800; }
+    .cta { margin-top: 1em; display: inline-block; }
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     section {
       padding: 2em 1.5em;
@@ -111,17 +89,13 @@
       border-radius: 5px;
       cursor: pointer;
       font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background-color: #005ea0;
     }
     .service-item {
       display: flex;
       align-items: center;
       margin-bottom: 1em;
     }
-    .service-item img {
+    .service-item svg {
       width: 28px;
       height: 28px;
       margin-right: 0.8em;
@@ -129,8 +103,6 @@
     .testimonial {
       font-style: italic;
       margin-bottom: 1.5em;
-      font-size: 1em;
-      line-height: 1.5;
     }
     footer {
       text-align: center;
@@ -142,7 +114,12 @@
 </head>
 <body>
   <header>
-    <img src="https://img.icons8.com/color/96/portable-toilet.png" alt="PLOP-JON Logo" class="logo" />
+    <div class="logo">
+      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="12" y="10" width="40" height="44" rx="6" ry="6" fill="#FFA500" stroke="#333" stroke-width="2"/>
+        <rect x="24" y="20" width="16" height="20" fill="#fff"/>
+      </svg>
+    </div>
     <h1>PLOP-JON</h1>
     <p>Reliable Portable Toilets for Events & Construction<br>Serving Florida’s Treasure Coast Since 1986</p>
     <a href="#quote" class="cta">Get a Quick Quote</a>
@@ -150,75 +127,18 @@
 
   <section class="story">
     <h2>Our Story</h2>
-    <p>Founded in 1986 by Christine Bell, PLOP-JON has provided dependable portable sanitation to thousands of events and job sites across Florida. We started with just a few units and a single truck—and thanks to word-of-mouth and loyal clients, we've grown into one of the Treasure Coast’s most trusted names. Whether it’s a rural wedding or a major concert, we treat every delivery like a VIP event.</p>
+    <p>Founded in 1986 by Christine Bell, PLOP-JON has provided dependable portable sanitation to thousands of events and job sites across Florida. We started with just a few units and a single truck—and thanks to word-of-mouth and loyal clients, we've grown into one of the Treasure Coast’s most trusted names.</p>
   </section>
 
   <section class="services">
     <h2>What We Provide</h2>
     <div class="service-item">
-      <img src="https://img.icons8.com/fluency/48/toilet-paper.png" alt="Restroom Icon" />
+      <svg viewBox="0 0 24 24" fill="#0078D4" xmlns="http://www.w3.org/2000/svg"><path d="M7 3v1h10V3h2v2h-2v16h2v2h-2v-1H7v1H5v-2h2V5H5V3h2z"/></svg>
       <span>Standard & ADA-compliant portable restrooms</span>
     </div>
     <div class="service-item">
-      <img src="https://img.icons8.com/fluency/48/sink.png" alt="Sink Icon" />
-      <span>Units with built-in sinks & hand sanitizer dispensers</span>
+      <svg viewBox="0 0 24 24" fill="#0078D4" xmlns="http://www.w3.org/2000/svg"><path d="M3 11h18v2H3z"/><circle cx="6" cy="7" r="1.5"/><circle cx="12" cy="7" r="1.5"/><circle cx="18" cy="7" r="1.5"/></svg>
+      <span>Units with sinks & sanitizer dispensers</span>
     </div>
     <div class="service-item">
-      <img src="https://img.icons8.com/fluency/48/confetti.png" alt="Event Icon" />
-      <span>Event coverage for weddings, festivals, polo matches</span>
-    </div>
-    <div class="service-item">
-      <img src="https://img.icons8.com/fluency/48/crane.png" alt="Construction Icon" />
-      <span>Job site rentals with weekly maintenance</span>
-    </div>
-    <div class="service-item">
-      <img src="https://img.icons8.com/fluency/48/delivery.png" alt="Truck Icon" />
-      <span>Flexible delivery & pickup scheduling</span>
-    </div>
-  </section>
-
-  <section class="form-section" id="quote">
-    <h2>Request a Free Quote</h2>
-    <form>
-      <label for="name">Your Name*</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email*</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone">
-
-      <label for="event">Type of Event or Site*</label>
-      <select id="event" name="event" required>
-        <option value="wedding">Wedding</option>
-        <option value="concert">Concert</option>
-        <option value="construction">Construction Site</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label for="date">Event Date</label>
-      <input type="date" id="date" name="date">
-
-      <label for="units">How many units?</label>
-      <input type="number" id="units" name="units">
-
-      <label for="frequency">How often would you like service?</label>
-      <select id="frequency" name="frequency">
-        <option value="once">Once a week</option>
-        <option value="twice">Twice a week</option>
-        <option value="biweekly">Every other week</option>
-      </select>
-
-      <button type="submit">Request Quote</button>
-    </form>
-  </section>
-
-  <section class="testimonials">
-    <h2>Happy Clients</h2>
-    <div class="testimonial">“PLOP-JON saved the day for our wedding—so clean and prompt!” – Laura M., Vero Beach</div>
-    <div class="testimonial">“90 units deployed for Luke Bryan—couldn’t have asked for better support.” – Event Crew Lead</div>
-  </section>
-
-  <footer>
-    Proud
+      <svg viewBox="0 0 24 24" fill="#0078D4" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.09 6.26L20 9l-5 3.73L16.18 20 12 16.27 7.82 20 9 12.73 4 9l5.91-0.74
